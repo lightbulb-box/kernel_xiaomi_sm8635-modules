@@ -2116,7 +2116,7 @@ static int goodix_get_mode_value(void *private, enum touch_mode mode)
 	case TOUCH_MODE_NONUI_MODE:
 		return ts_core->nonui_enabled ? 2 : 0;
 	case TOUCH_MODE_REPORT_RATE:
-		return ts_core->high_report_rate;
+		return ts_core->high_report_rate ? 1 : 0;
 	case TOUCH_MODE_GAME_MODE:
 		return ts_core->game_mode;
 	case TOUCH_MODE_TOUCH_UP_THRESHOLD:
